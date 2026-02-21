@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dietary Preference | NutriMom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #fffaf7;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3b2b2f;
+    }
+
+    .progress {
+      position: absolute;
+      top: 30px;
+      display: flex;
+      gap: 40px;
+      font-size: 14px;
+      color: #9a7c85;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step span {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #f2e6ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .step.active span {
+      background: #e86b8a;
+      color: #fff;
+    }
+
+    .card {
+      width: 620px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 22px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      background: #fdecef;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: #e86b8a;
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #7a646b;
+      margin-bottom: 28px;
+    }
+
+    label {
+      font-size: 13px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #e3cfd5;
+      font-size: 14px;
+      background: #fffaf7;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .btn-outline {
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 1.5px solid #e3cfd5;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: none;
+      background: #e86b8a;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Progress -->
+  <div class="progress">
+    <div class="step">
+      <span>1</span> Personal Info
+    </div>
+    <div class="step active">
+      <span>2</span> Dietary Preference
+    </div>
+    <div class="step">
+      <span>3</span> Medical Values
+    </div>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+    <div class="icon">🍽️</div>
+
+    <h2>Dietary Preference</h2>
+    <p class="subtitle">Select your dietary preference</p>
+
+    <label>Dietary Preference</label>
+    <select>
+      <option>Choose your preference</option>
+      <option>🥦 Vegetarian</option>
+      <option>🍗 Non-Vegetarian</option>
+      <option>🌱 Vegan</option>
+      <option>🥚 Eggetarian</option>
+    </select>
+
+    <div class="actions">
+      <button class="btn-outline" onclick="goBack()">← Back</button>
+      <button class="btn-primary" onclick="goNext()">Next →</button>
+
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = "profile.html";
+    }
+  </script>
+<script>
+  function goBack() {
+    window.location.href = "profile.html";
+  }
+
+  function goNext() {
+    window.location.href = "medical.html";
+  }
+</script>
+
+</body>
+</html>

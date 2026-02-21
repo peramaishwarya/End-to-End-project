@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NutriMom | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      👶
+    </div>
+
+    <h2 class="auth-title">NutriMom</h2>
+    <p class="auth-subtitle">
+      Personalized Diet Planning for Pregnant Women
+    </p>
+
+    <div class="auth-tabs">
+      <button class="tab active">Log In</button>
+      <button class="tab">Sign Up</button>
+    </div>
+
+    <form class="auth-form">
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Your full name">
+
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com">
+
+      <label>Password</label>
+      <input type="password" placeholder="••••••••">
+
+      <label>I am a...</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="role" checked>
+          Pregnant Woman
+        </label>
+        <label>
+          <input type="radio" name="role">
+          Doctor
+        </label>
+      </div>
+
+      <button type="button" class="auth-button" onclick="openLogin()">
+        Create Account
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

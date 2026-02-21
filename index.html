@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NutriMom</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">👶</span>
+      <span>NutriMom</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="#" class="login-link" onclick="openAuth()">Log In</a>
+      <a href="#" class="btn-get-started" onclick="openAuth()">Get Started</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero">
+    <div class="hero-content">
+
+      <div class="badge">
+        ❤️ Personalized Nutrition for Every Trimester
+      </div>
+
+      <h1 class="hero-title">
+        <span>Smart Pregnancy Diet Plan System</span>
+      </h1>
+
+      <p class="hero-description">
+        A smart diet planning system that assesses your health profile,
+        predicts risk levels, and generates doctor-validated meal plans —
+        tailored just for you and your baby.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="javascript:void(0)" class="btn-primary" onclick="openAuth()">
+          Create Your Plan
+        </a>
+
+        <a href="#" class="btn-secondary">I'm a Doctor</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">
+      Four simple steps to your personalized pregnancy diet plan
+    </p>
+
+    <div class="steps-container">
+      <div class="step-card">
+        <div class="step-icon">❤️</div>
+        <h3>Health Profile</h3>
+        <p>Track your BMI, trimester, and vital health indicators in one place.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-icon">🛡️</div>
+        <h3>Risk Assessment</h3>
+        <p>Rule-based prediction evaluates your health data to classify risk levels.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-icon">🍽️</div>
+        <h3>Personalized Diet</h3>
+        <p>Get daily meal plans tailored to your trimester, BMI, and dietary preference.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-icon">🩺</div>
+        <h3>Doctor Validation</h3>
+        <p>Your diet plan is reviewed and approved by a medical professional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-card">
+      <div class="cta-icon">👶</div>
+      <h2 class="cta-title">Ready to Start Your Journey?</h2>
+      <p class="cta-text">
+        Sign up today and get a personalized diet plan reviewed by certified doctors.
+      </p>
+      <button class="cta-btn" onclick="openAuth()">Sign Up Free</button>
+    </div>
+  </section>
+
+  <!-- LOGIN / SIGNUP OVERLAY (FIXED & SINGLE) -->
+  <div id="authOverlay" class="auth-overlay">
+
+    <div class="auth-card">
+
+      <div class="auth-logo">👶</div>
+
+      <h2 class="auth-title">NutriMom</h2>
+      <p class="auth-subtitle">
+        Personalized Diet Planning for Pregnant Women
+      </p>
+
+      <div class="auth-tabs">
+        <button class="tab">Log In</button>
+        <button class="tab active">Sign Up</button>
+      </div>
+
+      <form class="auth-form">
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Your full name">
+
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com">
+
+        <label>Password</label>
+        <input type="password" placeholder="••••••••">
+
+        <label>I am a...</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="role" checked>
+            Pregnant Woman
+          </label>
+          <label>
+            <input type="radio" name="role">
+            Doctor
+          </label>
+        </div>
+
+        <button type="button" class="auth-button" onclick="goToWelcome()">
+          Create Account
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+  function openAuth() {
+    document.getElementById("authOverlay").classList.add("active");
+  }
+
+  document.getElementById("authOverlay").addEventListener("click", function (e) {
+    if (e.target === this) {
+      this.classList.remove("active");
+    }
+  });
+
+  function goToWelcome() {
+    window.location.href = "welcome.html";
+  }
+</script>
+
+
+</body>
+</html>
